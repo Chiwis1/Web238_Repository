@@ -33,3 +33,20 @@ $(document).ready(function() {
         .animate({ left: '-50px' }, 1000) // Then back to the left
         .animate({ left: '0px' }, 1000);// Stop In The Middle
 }); // The code used to animate the title heading
+
+$(document).ready(function() {
+    // Create a new div with the class line
+    var lineDiv = $('<div class="line"></div>');
+    $('section.grid-container.hours article').before(lineDiv); 
+    $('.line').css('margin', '0');
+    $('.define').css('margin-top', '0');
+}); // Code for adding lines to make it more readable
+
+$(document).ready(function() {
+    // Apply styles to even list items
+    $('ul.list li:odd').addClass('even-item');
+    $('.even-item').css({
+        'color':'white',
+        'background-color':'black'
+    });
+}); // Code for filtering even list items for assignment
