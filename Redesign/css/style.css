@@ -632,6 +632,11 @@ label {
         grid-column: span 3;
     }
 
+    .line {
+        border-top: 2px solid black;
+        margin: 10px 0;
+    }
+    
     /* About Page Styles Desktop */
     .about {
         grid-column: span 3;
