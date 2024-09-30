@@ -27,7 +27,9 @@ $('a.nav-link').hover(function() {
 }); // Code used for changing the nav-link hover color
 
 $(document).ready(function() {
-    $('h1').animate({ left: '50px' }, 1000) //First Move To Right
+    $('h1')
+        .fadeIn(1000)
+        .animate({ left: '50px' }, 1000) //First Move To Right
         .animate({ left: '-50px' }, 1000) // Then move back to the left
         .animate({ left: '50px' }, 1000) // Repeat move to the right again
         .animate({ left: '-50px' }, 1000) // Then back to the left
@@ -50,3 +52,11 @@ $(document).ready(function() {
         'background-color':'black'
     });
 }); // Code for filtering even list items for assignment
+
+$(document).ready(function() {
+    $('.form').on('submit', function(event) {
+        alert('Submitted'); // Show alert
+
+        $(this).trigger("reset"); // reset form
+    });
+}); // Alert when submit button clicked
