@@ -28,7 +28,7 @@ $('a.nav-link').hover(function() {
 
 $(document).ready(function() {
     $('h1')
-        .fadeIn(1000)
+        .fadeIn(2500)
         .animate({ left: '50px' }, 1000) //First Move To Right
         .animate({ left: '-50px' }, 1000) // Then move back to the left
         .animate({ left: '50px' }, 1000) // Repeat move to the right again
