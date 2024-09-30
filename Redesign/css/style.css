@@ -137,6 +137,7 @@ h1 {
     margin: 1em;
     text-align: center;
     position: relative;
+    display: none;
 }
 
 h2 {
@@ -175,7 +176,6 @@ p {
 .hero {
     width: 100%;
     height: auto;
-    /* grid-column: span 2; */
 }
 
 section {
@@ -215,6 +215,7 @@ article > img {
     display: flex;
     text-transform: uppercase;
     border-radius: 2em;
+    cursor: pointer;
 }
 
 .button:hover{
