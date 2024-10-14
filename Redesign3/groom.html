@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="jvg">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Groom Page</title>
+</head>
+<body>
+   <div class="wrapper">
+        <header>
+            <nav class="navbar">
+                <a href="index.html" class="nav-brand">
+                    <img src="assets/logo.jpg" alt="Logo for NAWS" class="logo-img">
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Services <span class="arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a href="donate.html" class="nav-link">Donate</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="volunteer.html" class="nav-link">Volunteer</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="groom.html" class="nav-link">Grooming</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div><!-- Close of Hamburger class -->
+            </nav>
+        </header>
+        <main class="main">
+            <h1>Pet Grooming</h1>
+            <section class="terry">
+                <h2>Hello, my name us Terry</h2>
+                <article>
+                    <p class="text">I have been working with animals for over 30 years. I owned and operated three pet supply stores with grooming salons in California. I have been a professional pet groomer for over 20 years. I am a certified veterinary assistant, and lifelong animal advocate.</p>
+
+                    <img class="intro" src="/assets/grooming.jpg" alt="Picture of Terry grooming">
+
+                    <p class="text">I have been a crazy cat lady all my life, so it's only natural that they are my specialty. I welcome hard to groom cats, scaredy cats, matted diva cats, you name it! I groom all breeds of dogs, too.  (I don't discriminate!) I am a little different from most groomers. Instead of dropping them off for the day, you are welcomed to watch. it takes me about an hour to groom most pets. </p>
+                </article>
+            </section>
+
+            <section class="cost">
+                <h2>Grooming Cost</h2>
+                <article>
+                    <p class="text">There are no extra charges, and they get whatever they need.</p>
+
+                    <p class="text">Small breeds up to 25 lbs: <br>$25- $35</p>
+                    <p class="text">Medium breeds up to 40-60 lbs: <br>$40-$55</p>
+                    <p class="text">Large breeds 61 lbs and up: <br>$60-$100</p>
+                </article>
+            </section>
+
+            <section class="groom-service">
+                <h2>Grooming Service</h2>
+                <article class="service">
+                    <p>The grooming service comes with:</p>
+                    <ul class="list">
+                        <li>Bathing</li>
+                        <li>Haircut</li>
+                        <li>Ear Cleaning</li>
+                        <li>Nail Trimming</li>
+                        <li>Fur Combed</li>
+                        <li>Hand Scissoring</li>
+                    </ul>
+                    
+                    <p class="text">
+                        Offered Only on<br>
+                        Saturday and Sunday<br>
+                        10:00 AM to 2:00PM<br>
+                    </p>
+                </article>
+            </section>
+
+            <section class="groom-form">
+                <form action="mailto:" class="form">
+                    <h2 class="contact-heading">Schedule Appointment</h2>
+                    <article class="input">
+                        <label for="first_name">First Name*</label><br>
+                        <input type="text" class="box" name="first_name" required><br>
+                    </article>
+
+                    <article class="input">
+                        <label for="last_name">Last Name*</label><br>
+                        <input type="text" class="box" name="last_name" required><br>
+                    </article>
+                    
+                    <article class="input">
+                        <label for="email">Email</label><br>
+                        <input type="text" class="box" name="email"><br>
+                    </article>
+                    
+                    <article class="input">
+                        <label for="pet_name" class="">Pet Name*</label><br>
+                        <input type="text" class="box" name="pet-name" required><br>
+                    </article>
+                    
+                    <label for="pet_type" class="">Pet type*</label><br>
+                    <article class="pet-type">
+                        <div class="radio-wrap">
+                            <input type="radio" class="" name="pet-type" value="cat" required>
+                            <label for="cat">Cat</label>
+                        </div><!-- This it to make the radio buttons side by side -->
+
+                        <div class="radio-wrap">
+                            <input type="radio" class="" name="pet-type" value="dog" required>
+                            <label for="dog">Dog</label>
+                        </div><!-- This it to make the radio buttons side by side -->
+                    </article>
+
+                    <div class="select-wrapper">
+                        <article class="">
+                            <label for="day">Day*</label>
+                            <div class="radio-wrap">
+                                <select name="day" id="">
+                                    <option value="thursday">Thursday</option>
+                                    <option value="friday">Friday</option>
+                                    <option value="saturday">Saturday</option>
+                                </select>
+                            </div>
+                        </article>
+
+                        <article class="">
+                            <label for="time">Time*</label>
+                            <div class="radio-wrap">
+                                <select name="day">
+                                    <option value="10">10 Am</option>
+                                    <option value="11">11 Am</option>
+                                    <option value="12">12 Pm</option>
+                                    <option value="1">1 Pm</option>
+                                    <option value="2">2 Pm</option>
+                                </select>
+                            </div>
+                        </article>
+                    </div><!--This is a wrapper for the selects to put them side by side  -->
+
+                    <input type="submit" value="submit" class="button">
+                    <input type="reset" value="reset" class="button">
+                </form>
+            </section>
+
+        </main>
+   </div><!-- Closed Wrapper -->
+    <footer class="footer">
+        <section>
+            <a href="index.html" class="nav-brand">
+                <img src="assets/logo.jpg" alt="Logo for NAWS" class="logo-img">
+            </a>
+        </section>
+        <section>
+            Copyright &copy; 2023 All Rights Reserved
+        </section>
+    </footer>
+</body>
+<script src="js/menu.js"></script>
+</html>

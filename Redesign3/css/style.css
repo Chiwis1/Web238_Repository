@@ -1,0 +1,779 @@
+html {
+    --Background: #DACFA4;
+    --Headings: #3700B3;
+    --Button: #007045;
+    --text: #000000;
+    --white: #fff;
+}
+
+:root {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    position: relative;
+    width: 100%;
+    background-color: var(--Background);
+    margin: 0;
+    font-size: 16px;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: .5em 1em;
+    background-color: var(--Background);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+}
+
+/* Styles for nav menu */
+.navbar {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 155px;
+    height: auto;
+}
+
+.nav-brand {
+    margin-left: 1em;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    height: 70px;
+    padding-top: 1.5em;
+    margin: 0 auto;
+}
+
+.bar {
+    display: block;
+    width: 24px;
+    height: 3px;
+    margin: 5px auto;
+    border-radius: 10px;
+    background-color: var(--Headings);
+    transition: all .3s ease;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: .2rem;
+    position: fixed;
+    left: -100%;/* Pulling off the screen */
+    top: 55px;
+    gap: 0;
+    flex-direction: column;
+    text-align: center;
+    transition: .3s;
+    background-color: var(--white);
+    font-size: 16px;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.nav-item {
+    margin: 1em 1em;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--Headings);
+    font-weight: bold;
+    transition: .7s ease;
+}
+
+.nav-link:hover {
+    color: rgb(226, 43, 43);
+    transform: scaleY(1.5);
+    padding: .5em;
+    border-radius: 5px;
+    background-color: #fff;
+    text-decoration: underline;
+}
+
+.nav-link:active {
+    text-decoration: underline;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+ul.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    z-index: 1;
+    list-style: none;
+    border: solid black;
+    text-align: center;
+    padding: 0;
+}
+
+.nav-item.dropdown.show .dropdown-menu {
+    display: block;
+}
+
+
+/* Main's Styles */
+h1 {
+    color: var(--Headings);
+    margin: 1em;
+    text-align: center;
+    position: relative;
+    display: none;
+}
+
+h2 {
+    color: var(--Headings);
+    text-align: center;
+    grid-column: span 1;
+}
+
+h3 {
+    color: var(--Headings);
+    text-align: center;
+}
+
+h4 {
+    display: inline;
+}
+
+.text {
+    margin: 1em 2em;
+    padding: .5em auto;
+    font-size: 16px;
+    line-height: 2;
+}
+
+p {
+    font-size: 16px;
+}
+
+.main {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+}
+
+section {
+    background-color: var(--white);
+    align-items: center;
+}
+
+.grid-container {
+    grid-column: span 1;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+
+.grid-item {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+article > a > img {
+    display: flex;
+    width: 175px;
+    height: auto;
+    margin: auto;
+}
+
+.button {
+    background-color: var(--Button);
+    color: var(--white);
+    width: auto;
+    min-width: 150px;
+    height: auto;
+    margin: 1em auto;
+    padding: 1em 2em;
+    display: flex;
+    text-transform: uppercase;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: var(--Headings);
+}
+
+/* Home Styles */
+.hours {
+    text-align: center;
+}
+
+.days {
+    font-weight: bold;
+}
+
+.naws {
+    margin-bottom: 2em;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.button {
+    background-color: var(--Button);
+    color: var(--white);
+    width: auto;
+    min-width: 150px;
+    height: auto;
+    margin: 1em auto;
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    line-height: 2em;
+}
+
+/* Footer's Styles */
+.footer {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 2em;
+    background-color: var(--white);
+    display: flex;
+}
+
+.footer > a {
+    text-decoration: none;
+    color: #08b;
+    margin: 1em 5em 0 0;
+}
+
+/* About Page Styles */
+.about {
+    margin-bottom: 2em;
+}
+
+.stats {
+    text-align: left;
+    padding: 0em 2em 1em;
+}
+
+
+/* Contact Page Styles */
+.contact-heading {
+    padding: .5em auto;
+    line-height: 1;
+}
+
+form {
+    padding: 2em;
+    grid-column: span 1;
+    text-align: center;
+}
+
+.message {
+    margin: 1em auto;
+    padding: 1em;
+}
+
+#message {
+    width: 100%;
+    overflow: auto;
+}
+
+.input {
+    width: 95%;
+    margin: auto;
+}
+
+.list {
+    text-decoration: dotted;
+}
+
+.fax {
+    font-weight: bold;
+}
+
+.location {
+    text-align: center;
+    padding: 0 2em 1em;
+    line-height: .5em;
+}
+
+.map {
+    margin: auto;
+}
+
+.box {
+    overflow: auto;
+    padding: 1em;
+    margin: 1em;
+}
+
+.pet-type {
+    display: flex;
+    justify-content: center;
+}
+
+.radio-wrap {
+    margin: 1em auto;
+    text-align: center;
+}
+
+.select-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1em auto;
+}
+
+.cost {
+    text-align: center;
+}
+
+.service {
+    text-align: center;
+}
+
+ul.list {
+    display: inline-block;
+    text-align: left;
+}
+
+/* Volunteer Page Styles */
+.check-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 1em auto;
+}
+
+.check-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.check {
+    margin: .5em auto;
+    grid-column: 1;
+}
+
+.checko {
+    margin: .5em auto;
+    grid-column: 1;
+}
+
+label {
+    margin: 1em auto;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Grooming Page Styles */
+.intro {
+    float: right;
+    padding:  2em;
+    max-width: 50%;
+}
+
+/* Tablet/Medium Viewports */
+@media (min-width: 45em) {
+    /* Main Styles Tablet */
+    .wrapper {
+        width: 85%;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
+
+    body {
+        margin-top: 2em;
+    }
+
+    /* Nav Styles Tablet */
+    .nav-brand {
+        flex: 3 33%;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 3em;
+    }
+
+    .hamburger {
+        display: none;
+        cursor: pointer;
+    }
+
+    /* Content Styles Tablet*/
+    h1 {
+        grid-column: span 2;
+    }
+
+    .hero {
+        grid-column: span 2;
+    }
+
+    .naws {
+        grid-column: span 2;
+    }
+
+    .services {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2em;
+    }
+
+    .services-heading {
+        grid-column: span 2;
+    }
+
+    article > a > img {
+        width: 225px;
+        height: auto;
+        margin: auto;
+    }
+
+    /* About Page Styels Tablet */
+    .about {
+        grid-column: span 2;
+    }
+
+    /* Contact Styles Tablet */
+    .contact-form {
+        grid-column: span 2;
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        justify-content: center;
+    }
+
+    .input {
+        width: 90%;
+        margin: 1em auto;
+        padding: 1em auto; 
+        overflow: auto;
+    }
+
+    .message {
+        grid-column: span 2;
+        width: 80%;
+        margin: auto;
+    }
+
+    .location {
+        grid-column: span 2;
+    }
+
+    .numbers {
+        text-align: center;
+    }
+
+    .stats {
+        text-align: center;
+    }
+    
+    ul.list{
+        display: inline-block;
+        text-align: left;
+    }
+
+    /* Groom Styles Tablet */
+    .terry {
+        grid-column: span 2;
+    }
+
+    .cost {
+        grid-column: span 1;
+    }
+
+    .service {
+        grid-column: span 1;
+        text-align: center;
+    }
+
+    .groom-form {
+        grid-column: span 2;
+    }
+
+    /* Volunteer Page Styles Tablet */
+    .vol {
+        grid-column: span 2;
+    }
+
+    .check-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1em;
+        margin: 1em auto;
+    }
+    
+    .check-wrap {
+        grid-column: span 2;
+    }
+    
+    .check {
+        margin: .5em auto;
+        grid-column: 1;
+        overflow: auto;
+    }
+
+    .checko {
+        grid-column: span 1;
+        margin: .5em auto;
+        overflow: auto;
+    }
+
+    /* Multi Page Styles */
+    .contact-heading {
+        grid-column: span 2;
+        margin: 1em auto;
+    }
+
+    .type {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+        margin: auto;
+    }
+
+    /* Donation Styles Dektop */
+    .donation {
+        grid-column: span 2;
+    }
+}
+
+/* Desktop/Large Viewports */
+@media (min-width: 65em) {
+    .wrapper {
+        width: 80%;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        column-gap: 2em;
+    }
+
+    h1 {
+        grid-column: span 3;
+    }
+
+    p {
+        margin: .5em;
+    }
+
+    .hero {
+        grid-column: span 3;
+        width: 85%;
+        height: 85%;
+        margin: auto;
+    }
+
+    .naws {
+        grid-column: span 2;
+    }
+
+    .support {
+        grid-column: span 2;
+        grid-row: span 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .support-heading {
+        grid-column: span 2;
+    }
+
+    .hours {
+        grid-row:  3/5;
+        grid-column:  3/3;
+    }
+
+    .services {
+        grid-row: span 2;
+        grid-column: span 3;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services-heading {
+        grid-column: span 3;
+    }
+
+    .line {
+        border-top: 2px solid black;
+        margin: 10px 0;
+    }
+    
+    /* About Page Styles Desktop */
+    .about {
+        grid-column: span 3;
+        width: 85%;
+        height: auto;
+        margin: auto;
+    }
+
+    /* Contact Page Styles Desktop */
+    .contact {
+        grid-column: span 2;
+        display: grid;
+        grid-template-rows: auto;
+        margin: 0 auto;
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        margin: auto;
+    }
+
+    .input {
+        grid-column: span 1;
+        text-align: center;
+        width: 95%;
+        padding: 1em;
+        margin: 1em;
+    }
+    
+    .message {
+        grid-column: span 2;
+        margin: 1em auto;
+        text-align: center;
+    }
+
+    .box {
+        overflow: auto;
+        padding: 1em;
+        width: 45%;
+        text-align: center;
+    }
+
+    .location {
+        grid-column: span 1;
+    }
+
+    /* Donation Styles Dektop */
+    .donation {
+        grid-column: span 3;
+        padding-left: 5em;
+    }
+
+    .pay {
+        display: flex;
+        width: 50%;
+        height: auto;
+    }
+
+    /* Groom Styles Desktop */
+    .terry {
+        grid-column: span 2;
+    }
+
+    .cost {
+        grid-column: span 1;
+    }
+
+    .groom {
+        grid-column: 3;
+    }
+
+    .groom-service {
+        grid-column: span 1;
+    }
+
+    .groom-form {
+        grid-row: 3;
+    }
+
+    /* Volunteer Page Styles */
+    .vol {
+        grid-column: span 3;
+    }
+
+    .check-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1em;
+        margin: 1em auto;
+    }
+    
+    .check {
+        margin: .5em auto;
+        grid-column: 1;
+        overflow: auto;
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+        margin: auto;
+    }
+
+    /* Universal Styles Desktop */
+    .button {
+        grid-row: 6;
+    }
+}
